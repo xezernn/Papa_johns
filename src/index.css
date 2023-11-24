@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Open Sans Condensed", sans-serif;
+    list-style-type: none;
+}
+
+.bgSilver {
+    background-color: #F1F1F1;
+}
+
+.textGreen{color: #0F9675;}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+}
+
+.topMenu {
+    display: none;
+}
+
+#logo {
+    width: 60px;
+    display: block;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#azFlag {
+    width: 25px;
+}
+
+.headerLogin {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000000;
+
+}
+
+.headerIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+.headerRed {
+    background: #AD0F14;
+    overflow: hidden;
+}
+
+#menuList {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+#menuList a {
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-break: loose;
+    letter-spacing: -.5px;
+}
+
+main {
+    padding: 30px 0;
+}
+
+#selectMenu {
+    display: flex;
+    gap: 15px;
+    padding: 10px 20px 15px 20px;
+}
+
+#selectMenu a {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#selectMenu a:hover {
+    color: #AD0F14;
+}
+
+.cards {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cardTop {
+    height: 300px;
+    width: 100%;
+}
+
+.cardTop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardBottom {
+    padding: 10px 0;
+}
+
+.cardBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.cardBottom span {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.cardBottom button {
+    padding: 10px 17px;
+    background: #0F9675;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+#redLogo {
+    display: none;
+}
+
+.promo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    margin: 20px 0;
+}
+.promo input{
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #0F9675;
+    outline-color:#0F9675;
+    border-radius: 8px;
+    height: 39px;
+    line-height: 39px;
+    color: #000000;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.promo h2{display: none;}
+
+.promoInp{
+    display: flex;
+    gap: 15px;
+}
+
+.promoInp button{
+    padding: 0 21px;
+    background: #0F9675;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    -webkit-transition: all, .3s;
+    transition: all, .3s;
+    height: 39px;
+    line-height: 39px;
+    border-radius: 4px;
+}
+
+footer{
+    background-color: #AD0F14;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 93.5%;
+    }
+
+    .topMenu {
+        display: block;
+    }
+
+    .topMenu ul {
+        display: flex;
+        gap: 15px;
+    }
+
+    .topMenu ul a {
+        color: #000;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .headerTop {
+        padding-left: 210px;
+        height: 69px;
+    }
+
+    .flexCol {
+        display: flex;
+        flex-direction: column  !important;
+    }
+
+    .headerTop #logo {
+        display: none;
+    }
+
+    .headerLogin {
+        width: 43%;
+    }
+
+    #redBar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        align-items: center;
+    }
+
+    .headerIcon {
+        flex-direction: row;
+    }
+
+    #redLogo {
+        min-width: 200px;
+        width: 270px;
+        display: block;
+    }
+
+    #redLogo img {
+        margin-top: -30px;
+        width: 100%;
+    }
+
+    #menuList {
+        justify-content: end;
+        gap: 20px;
+    }
+
+    #menuList a {
+        font-size: 1.4em
+    }
+
+    #menuList li {
+        position: relative;
+
+    }
+
+    #menuList li::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        background-color: white;
+        height: 3px;
+        width: 0;
+        transition: 1s;
+    }
+
+    #menuList li:hover::before {
+        width: 100%;
+    }
+
+    .card {
+        width: calc(25% - 15px);
+    }
+
+    .cardBottom {
+        padding: 10px;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #bal{
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .promo h2{
+        display: block;
+    }
+}
