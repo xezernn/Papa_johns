@@ -5,6 +5,7 @@ import HeaderBottom from './HeaderBottom'
 function Header() {
     return (
         <header>
+            <div>salam</div>
             <HeaderTop />
             <HeaderBottom />
         </header>
