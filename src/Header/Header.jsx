@@ -2,12 +2,12 @@ import React from 'react'
 import HeaderTop from './HeaderTop'
 import HeaderBottom from './HeaderBottom'
 
-function Header() {
+function Header({sebet, setSebet}) {
+
     return (
         <header>
-            <div>salam</div>
-            <HeaderTop />
-            <HeaderBottom />
+            <HeaderTop sebet={sebet} setSebet={setSebet} />
+            <HeaderBottom  />
         </header>
     )
 }

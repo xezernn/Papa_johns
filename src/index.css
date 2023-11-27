@@ -11,8 +11,10 @@
     background-color: #F1F1F1;
 }
 
-.textGreen{color: #0F9675;}
-
+.textGreen {
+    color: #0F9675;
+}
+button{cursor: pointer;}
 .container {
     width: 95%;
     margin: auto;
@@ -89,7 +91,8 @@
 }
 
 main {
-    padding: 30px 0;
+    padding: 0 0 30px 0;
+    position: relative;
 }
 
 #selectMenu {
@@ -164,7 +167,7 @@ main {
     display: none;
 }
 
-.promo{
+.promo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,12 +175,13 @@ main {
     padding: 18px 0;
     margin: 20px 0;
 }
-.promo input{
+
+.promo input {
     display: block;
     width: 100%;
     background: #ffffff;
     border: 1px solid #0F9675;
-    outline-color:#0F9675;
+    outline-color: #0F9675;
     border-radius: 8px;
     height: 39px;
     line-height: 39px;
@@ -186,14 +190,16 @@ main {
     padding: 0 10px;
 }
 
-.promo h2{display: none;}
+.promo h2 {
+    display: none;
+}
 
-.promoInp{
+.promoInp {
     display: flex;
     gap: 15px;
 }
 
-.promoInp button{
+.promoInp button {
     padding: 0 21px;
     background: #0F9675;
     display: inline-block;
@@ -213,8 +219,110 @@ main {
     border-radius: 4px;
 }
 
-footer{
+footer {
     background-color: #AD0F14;
+}
+
+.sebet {
+    /* background-color: #AD0F14; */
+    padding: 40px 0;
+    width: 100%;
+    height: 73vh;
+    background-color: white;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.items {
+    height: 95%;
+    overflow-y: scroll;
+}
+
+.items::-webkit-scrollbar {
+    width: 0px;
+}
+
+.sebetItem {
+    height: 120px;
+    display: flex;
+    background-color: #EeE;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.sebetText {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sebetBtn {
+    background-color: #0F9675;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 0;
+}
+
+.listLeft {
+    width: 30%;
+}
+
+.listLeft img {
+    width: 100%;
+    height: 100%;
+}
+
+.listRight {
+    width: 70%;
+    align-items: center;
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.listBtn input {
+    width: 30px;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+.listBtn button {
+    padding: 5px 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #0F9675;
+
+}
+
+.removeBtn {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 5%;
+    top: 10%;
+
+}
+
+.top-3 {
+    top: 5px !important;
+}
+
+.yasamen{
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    color: red;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -244,7 +352,7 @@ footer{
 
     .flexCol {
         display: flex;
-        flex-direction: column  !important;
+        flex-direction: column !important;
     }
 
     .headerTop #logo {
@@ -316,16 +424,24 @@ footer{
     .cards {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        text-align: left;
+        justify-content: center;
     }
 
-    #bal{
+    #bal {
         color: white;
         font-size: 1.4em;
         font-weight: bold;
     }
 
-    .promo h2{
+    .promo h2 {
         display: block;
+    }
+
+    .sebet {
+        margin-top: -20px;
+        /* background-color: red; */
+        width: 40%;
+        height: 79vh;
     }
 }
