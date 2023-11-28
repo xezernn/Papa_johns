@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Card from "./Card"
 
-function Cards() {
+function Cards({basket, setBasket}) {
   const [data, setData] = useState([
     {
       "id": 1,
@@ -117,13 +117,10 @@ function Cards() {
     }
   ])
 
-  const [basket, setBasket] = useState()
-
-
-  function addBasket(num) {
-      console.log(num);
+  function addBasket(id){
+    let newItem = data.filter(item => item.id === id)
+    setBasket([...basket,newItem])
   }
-
 
   return (
     <div className="cards">
@@ -132,7 +129,7 @@ function Cards() {
         data.map(item => <Card 
           key={item.id} 
           {...item} 
-          addItem={addBasket}
+          addItem={()=>{addBasket(item.id)}}
           />
           )
       }

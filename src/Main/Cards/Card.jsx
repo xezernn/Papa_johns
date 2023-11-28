@@ -7,7 +7,7 @@ function Card({id,img,category,name,composition,price,addItem}) {
             <div className="cardBottom">
                 <div className='cardBtn'>
                     <span>{name}</span>
-                    <button onClick={()=>addItem(id)} >BUNU SEÇ</button>
+                    <button onClick={addItem} >BUNU SEÇ</button>
                 </div>
                 <p> {price} <br /> {composition} </p>
             </div>

@@ -1,13 +1,13 @@
 import React from 'react'
 import { CiCircleRemove } from "react-icons/ci";
 
-function SebetItem() {
+    function SebetItem({ id, img, category, name, composition, price }) {
     return (
         <div className="sebetItem">
-            <div className="listLeft"><img src="https://www.papajohns.az/uploads/images/chicken_parmesan_item.jpg" alt="" /></div>
+            <div className="listLeft"><img src={img} alt="Mehsul Sekili" /></div>
             <div className="listRight">
                 <div className='listText'>
-                    <h2>Ciken Parmezan</h2>
+                    <h2>{name}</h2>
                     <p>30 sm</p>
                 </div>
                 <div className="listBtn">
@@ -16,7 +16,7 @@ function SebetItem() {
                     <button>-</button>
                 </div>
                 <div className="pul">
-                    119M
+                    {price}M
                     <CiCircleRemove className='removeBtn' />
                 </div>
             </div>

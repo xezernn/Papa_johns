@@ -1,19 +1,21 @@
-import Cards from "./Cards"
+import { useState } from "react"
+import Cards from "./Cards/Cards"
 import MainSelect from "./MainSelect"
 import Promo from "./Promo"
 import Sebet from "./Sebet/Sebet"
 
 
 function Main({ sebet, setSebet }) {
-    // console.log(setSebet)
+    const [basket, setBasket] = useState([])
+
     return (
         <main>
             <div className="container">
                 <Promo />
                 <MainSelect />
-                <Cards />
+                <Cards basket={basket} setBasket={setBasket} />
             </div>
-            <Sebet sebet={sebet} setSebet={setSebet} />
+            <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
 
         </main>
     )
