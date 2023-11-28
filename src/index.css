@@ -160,8 +160,6 @@ main {
     padding: 10px 0px;
 }
 
-
-
 .cardBottom span {
     font-size: 1.4em;
     font-weight: bold;
@@ -233,10 +231,6 @@ main {
     height: 39px;
     line-height: 39px;
     border-radius: 4px;
-}
-
-footer {
-    background-color: #AD0F14;
 }
 
 .sebet {
@@ -345,6 +339,67 @@ footer {
     display: none;
 }
 
+
+footer {
+    background-color: #AD0F14;
+    padding: 20px 0 35px 0;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.footerLeft {
+    display: flex;
+    justify-content: center;
+}
+
+#footerMenu {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#footerMenu a {
+    color: #fff;
+}
+
+.footerBottom {
+    margin-top: 20px;
+}
+
+.footerIcons {
+    width: max-content;
+    margin: auto;
+}
+
+.socialIcons {
+    width: max-content;
+    margin: 20px auto;
+}
+
+#socialMenu {
+    display: flex;
+    gap: 25px;
+    font-size: 1.5em;
+}
+
+#socialMenu a {
+    color: #fff;
+}
+
+.copy {
+    color: #fff;
+    width: max-content;
+    margin: 10px auto;
+}
+
+#copyElement {
+    display: none;
+}
+
 @media only screen and (min-width: 768px) {
     .container {
         width: 93.5%;
@@ -369,6 +424,7 @@ footer {
         padding-left: 210px;
         height: 69px;
     }
+
     .flexCol {
         display: flex;
         flex-direction: column !important;
@@ -418,6 +474,10 @@ footer {
 
     }
 
+    .d-none {
+        display: none;
+    }
+
     #menuList li::before {
         content: "";
         position: absolute;
@@ -463,5 +523,49 @@ footer {
         /* background-color: red; */
         width: 40%;
         height: 79vh;
+    }
+
+    footer {
+        padding: 13px 0;
+        overflow: hidden;
+    }
+
+    #footerMenu {
+        flex-direction: row;
+        width: max-content;
+    }
+
+    .footerright {
+        display: none !important
+    }
+
+    .footerLeft {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footerBottom {
+        margin: initial;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .socialIcons {
+        margin-top: 9px;
+    }
+
+    .copy {
+        display: none;
+    }
+
+    #copyElement {
+        display: block !important;
     }
 }
