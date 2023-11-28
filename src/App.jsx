@@ -4,7 +4,7 @@ import Header from "./Header/Header"
 import Main from "./Main/Main"
 
 function App() {
-  const [sebet, setSebet] = useState(false)
+  const [sebet, setSebet] = useState(true)
 
   return (
     <>

@@ -14,7 +14,11 @@
 .textGreen {
     color: #0F9675;
 }
-button{cursor: pointer;}
+
+button {
+    cursor: pointer;
+}
+
 .container {
     width: 95%;
     margin: auto;
@@ -73,11 +77,20 @@ button{cursor: pointer;}
     overflow: hidden;
 }
 
+.headerRed .container {
+    overflow-y: scroll;
+}
+
+.headerRed .container::-webkit-scrollbar {
+    display: none;
+}
+
+
 #menuList {
     display: flex;
     justify-content: center;
     gap: 5px;
-    margin: 20px 0;
+    margin: 20px 0px;
 }
 
 #menuList a {
@@ -143,9 +156,11 @@ main {
 .cardBtn {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 10px 0px;
 }
+
+
 
 .cardBottom span {
     font-size: 1.4em;
@@ -153,6 +168,7 @@ main {
 }
 
 .cardBottom button {
+    min-width: 118px;
     padding: 10px 17px;
     background: #0F9675;
     font-size: 16px;
@@ -316,13 +332,17 @@ footer {
     top: 5px !important;
 }
 
-.yasamen{
+.yasamen {
     position: absolute;
     top: 10px;
     right: 5%;
     color: red;
     font-size: 28px;
     cursor: pointer;
+}
+
+#bal {
+    display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -349,7 +369,6 @@ footer {
         padding-left: 210px;
         height: 69px;
     }
-
     .flexCol {
         display: flex;
         flex-direction: column !important;
@@ -429,6 +448,7 @@ footer {
     }
 
     #bal {
+        display: block;
         color: white;
         font-size: 1.4em;
         font-weight: bold;
