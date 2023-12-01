@@ -2,6 +2,7 @@ import React from 'react'
 
 function Card({id,img,category,name,composition,price,addItem}) {
     return (
+
         <div className="card">
             <div className="cardTop"><img src={img} alt="mehsul" /></div>
             <div className="cardBottom">

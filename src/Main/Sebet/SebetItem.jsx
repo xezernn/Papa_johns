@@ -1,7 +1,7 @@
 import React from 'react'
 import { CiCircleRemove } from "react-icons/ci";
 
-    function SebetItem({ id, img, category, name, composition, price }) {
+    function SebetItem({ id, img, category, name, composition, price,removeSebet }) {
     return (
         <div className="sebetItem">
             <div className="listLeft"><img src={img} alt="Mehsul Sekili" /></div>
@@ -17,7 +17,7 @@ import { CiCircleRemove } from "react-icons/ci";
                 </div>
                 <div className="pul">
                     {price}M
-                    <CiCircleRemove className='removeBtn' />
+                    <CiCircleRemove onClick={removeSebet} className='removeBtn' />
                 </div>
             </div>
         </div>

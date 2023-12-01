@@ -118,7 +118,7 @@ function Cards({basket, setBasket}) {
   ])
 
   function addBasket(id){
-    let newItem = data.filter(item => item.id === id)
+    let newItem = data.find(item => item.id === id)
     setBasket([...basket,newItem])
   }
 
