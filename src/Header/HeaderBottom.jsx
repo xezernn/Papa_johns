@@ -1,37 +1,37 @@
 import React from 'react'
 import { FaQuestion } from "react-icons/fa";
-
+import {Link} from "react-router-dom"
 function HeaderBottom() {
   return (
     <div className='headerRed'>
       <div className="container">
         <div id='redBar'>
-          <a href="#" id='redLogo'><img src="https://www.papajohns.az/img/content/pj_logo_web_new.png" alt="logo" /></a>
+          <Link to="/" id='redLogo'><img src="https://www.papajohns.az/img/content/pj_logo_web_new.png" alt="logo" /></Link>
           <ul id='menuList'>
-            <li><a href="#">Kampaniyalar</a></li>
+            <li><Link to="/">Kampaniyalar</Link></li>
             <li>
-              <a href="#">Papadias</a>
+              <Link to="/">Papadias</Link>
             </li>
             <li className="active">
-              <a href="#">Pizza</a>
+              <Link to="/">Pizza</Link>
             </li>
             <li>
-              <a href="#">Qəlyanaltı</a>
+              <Link to="/">Qəlyanaltı</Link>
             </li>
             <li>
-              <a href="#">Salat</a>
+              <Link to="/">Salat</Link>
             </li>
             <li>
-              <a href="#">Pasta</a>
+              <Link to="/">Pasta</Link>
             </li>
             <li>
-              <a href="#">İçki</a>
+              <Link to="/">İçki</Link>
             </li>
             <li>
-              <a href="#">Desert</a>
+              <Link to="/">Desert</Link>
             </li>
             <li>
-              <a href="">Sous</a>
+              <Link to='/'>Sous</Link>
             </li>
           </ul>
           <span id='bal'>
