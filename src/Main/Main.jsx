@@ -3,6 +3,7 @@ import Cards from "./Cards/Cards"
 import MainSelect from "./MainSelect"
 import Promo from "./Promo"
 import Sebet from "./Sebet/Sebet"
+import Product from "./Product"
 
 
 function Main({ sebet, setSebet }) {
@@ -10,13 +11,13 @@ function Main({ sebet, setSebet }) {
 
     return (
         <main>
-            <div className="container">
+            {/* <div className="container">
                 <Promo />
                 <MainSelect />
                 <Cards basket={basket} setBasket={setBasket} />
             </div>
-            <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
-
+            <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} /> */}
+            <Product/>
         </main>
     )
 }

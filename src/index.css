@@ -94,7 +94,7 @@ button {
 }
 
 #menuList a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     color: white;
     font-weight: 700;
@@ -116,7 +116,7 @@ main {
 
 #selectMenu a {
     color: #000;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -357,6 +357,7 @@ footer {
 #footerMenu {
     width: 50%;
     display: flex;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
@@ -373,6 +374,10 @@ footer {
 .footerIcons {
     width: max-content;
     margin: auto;
+}
+
+.footerIcons img {
+    max-width: 100%;
 }
 
 .socialIcons {
@@ -399,6 +404,20 @@ footer {
 #copyElement {
     display: none;
 }
+
+
+.productMain {
+    width: 95%;
+    margin: auto;
+}
+
+#productMenu {
+    display: flex;
+    text-decoration: underline;
+    gap: 20px;
+}
+
+#productMenu a {color: #8D94AD;}
 
 @media only screen and (min-width: 768px) {
     .container {
@@ -490,6 +509,10 @@ footer {
 
     #menuList li:hover::before {
         width: 100%;
+    }
+
+    #selectMenu a {
+        font-size: 1.2em;
     }
 
     .card {

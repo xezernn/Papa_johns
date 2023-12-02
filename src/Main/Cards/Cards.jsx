@@ -116,7 +116,7 @@ function Cards({basket, setBasket}) {
       "price": 12
     }
   ])
-
+  let n = 0
   function addBasket(id){
     let newItem = data.find(item => item.id === id)
     setBasket([...basket,newItem])

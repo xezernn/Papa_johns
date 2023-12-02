@@ -10,7 +10,7 @@ function Card({id,img,category,name,composition,price,addItem}) {
                     <span>{name}</span>
                     <button onClick={addItem} >BUNU SEÇ</button>
                 </div>
-                <p> {price} <br /> {composition} </p>
+                <p> {composition} </p>
             </div>
         </div>
     )
