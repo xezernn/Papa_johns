@@ -57,7 +57,7 @@ button {
     line-height: 20px;
     font-weight: 700;
     color: #000000;
-
+    overflow: hidden;
 }
 
 .headerIcon {
@@ -108,10 +108,16 @@ main {
     position: relative;
 }
 
+.mainSelect {
+    width: 100%;
+}
+
 #selectMenu {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 10px 20px 15px 20px;
+    max-width: 100%;
 }
 
 #selectMenu a {
@@ -136,6 +142,10 @@ main {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.cardText {
+    color: #000;
 }
 
 .cardTop {
@@ -347,6 +357,7 @@ footer {
     font-size: 18px;
     font-weight: 600;
     line-height: 20px;
+    overflow: hidden;
 }
 
 .footerLeft {
@@ -409,6 +420,7 @@ footer {
 .productMain {
     width: 95%;
     margin: auto;
+    overflow: hidden;
 }
 
 #productMenu {
@@ -417,9 +429,91 @@ footer {
     gap: 20px;
 }
 
-#productMenu a {color: #8D94AD;}
+#productMenu a {
+    color: #8D94AD;
+}
+
+.sliderH3 h3 {
+    height: 50vh;
+    color: #fff;
+    text-align: center;
+    background-color: #364d79;
+}
+
+.sliderH3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productLeft {
+    margin: 15px 0;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+}
+
+.qiymet {
+    font-weight: 500 O !important;
+    color: #AD0F14;
+}
+
+.addBtn {
+    margin: 10px 0;
+}
+
+.mehsulHaaqinda p {
+    padding: 5px 0;
+}
+
+.addBtn button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: 0;
+    background-color: #0F9675;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+.coruselDesk {
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    .card {
+        width: calc(50% - 15px);
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
 
 @media only screen and (min-width: 768px) {
+    .card {
+        width: calc(33% - 15px);
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .caruselDnone {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 998px) {
     .container {
         width: 93.5%;
     }
@@ -591,4 +685,30 @@ footer {
     #copyElement {
         display: block !important;
     }
+
+    .productFlex1 {
+        display: flex;
+        width: 100%;
+    }
+
+    .productTopBar {
+        padding: 20px 0;
+        font-size: 20px;
+    }
+    
+    .productLeft{width: 50%;}
+    .coruselDesk {
+        display: block;
+        width: 100%;
+    }
+    .coruselDesk img{width: 90%;height: 100%;}
+    .productRight{
+        margin-top: 10px;
+        padding: 20px 15px;
+        height: max-content;
+        width: max-content;
+        background-color: #e7e9f1;
+        border-radius: 15px;
+    }
+
 }
