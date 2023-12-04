@@ -5,6 +5,9 @@ import { Link, useParams } from 'react-router-dom'
 function Product({ data, setData }) {
   const {url,id} = useParams()
 
+  function addsbt(num){
+console.log(num);
+  }
   return (
     <div className='productMain'>
       <div className="productTopBar">
@@ -36,7 +39,7 @@ function Product({ data, setData }) {
           </div>
           <div className='addBtn'>
             <p>Şəhər: Baki</p>
-            <button>Səbətə əlavə et</button>
+            <button onClick={()=>{addsbt(id)}}>Səbətə əlavə et</button>
           </div>
         </div>
       </div>

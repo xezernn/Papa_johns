@@ -12,7 +12,7 @@ function Sebet({ sebet, setSebet, basket, setBasket }) {
             <CiCircleRemove className='yasamen' onClick={() => { setSebet(!sebet) }} />
             <div className='items'>
                 {basket.map((item, i) => (
-                    <SebetItem key={i} {...item} removeSebet={()=>{removeSbt(item.id)}} />
+                    <SebetItem key={item.id} {...item} removeSebet={()=>{removeSbt(item.id)}} />
                 ))}
 
             </div>

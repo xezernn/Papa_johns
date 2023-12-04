@@ -1,9 +1,6 @@
 import { useState } from "react"
 import Card from "./Card"
 import { useParams } from "react-router-dom"
-
-// const prop = useParams()
-// console.log(prop);
 function Cards({basket, setBasket, data, setData}) {
   let n = 0
   function addBasket(id){
