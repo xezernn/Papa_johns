@@ -127,10 +127,10 @@ function Main({ sebet, setSebet}) {
     }
   ])
 
-  useEffect(()=>{
-    axios.get("https://papaapi.yetim.me/food")
-    .then(res=> console.log(res))
-  },[])
+  // useEffect(()=>{
+  //   axios.get("https://papaapi.yetim.me/food")
+  //   .then(res=> console.log(res))
+  // },[])
 
 
 
@@ -139,7 +139,7 @@ function Main({ sebet, setSebet}) {
       <div className="container">
         <Routes>
           <Route path="/" element={<TwoElem basket={basket} setBasket={setBasket} data={data} setData={setData}   />}/>
-          <Route path="/papadias" element={<Cards basket={basket} setBasket={setBasket} data={data} setData={setData} />}/>
+          <Route path="/:prop" element={<Cards basket={basket} setBasket={setBasket} data={data} setData={setData} />}/>
           <Route path="/product/:id" element={<Product data={data} setData={setData} />} />
         </Routes>
         <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />

@@ -1,7 +1,11 @@
-import { useState } from "react"
-import Card from "./Card"
 import { useParams } from "react-router-dom"
+import Card from "./Card"
+
 function Cards({basket, setBasket, data, setData}) {
+
+  const prop = useParams()
+  console.log(prop);
+
   let n = 0
   function addBasket(id){
     let newItem = data.find(item => item.id === id)
