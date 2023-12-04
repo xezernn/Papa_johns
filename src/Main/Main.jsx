@@ -25,7 +25,7 @@ function Main({ sebet, setSebet, data, setData }) {
             <Route path=":id" element={<Product data={data} setData={setData} />}/>
           </Route>
         </Routes>
-        <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />,
+        <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
       </div>
 
     </main>
