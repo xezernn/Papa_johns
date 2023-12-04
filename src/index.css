@@ -90,7 +90,9 @@ button {
     display: flex;
     justify-content: center;
     gap: 5px;
-    margin: 20px 0px;
+    margin: 20px 0;
+    margin-left: 200px;
+
 }
 
 #menuList a {
@@ -485,19 +487,18 @@ h2 {
 }
 
 @media only screen and (min-width: 500px) {
-    .card {
-        width: calc(50% - 15px);
-    }
+    .card {width: calc(50% - 15px);}
 
     .cards {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    #menuList {margin-left: 0;}
 }
 
 @media only screen and (min-width: 768px) {
+    #menuList {margin-left: 0;}
     .card {
         width: calc(33% - 15px);
     }
@@ -574,8 +575,10 @@ h2 {
     }
 
     #menuList {
-        justify-content: end;
+        margin-left: 0;
+        justify-content: start;
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     #menuList a {
