@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 
 function Card({ id, img, category, name, composition, price, addItem }) {
     return (
-
+        
         <div className="card">
             <Link className='cardText' to={`/product/${id}`}>
                 <div className="cardTop"><img src={img} alt="mehsul" /></div>
-                <div className="cardBottom">
-                    <div className='cardBtn'>
-                        <span   >{name}</span>
-                        <button onClick={addItem} >BUNU SEÇ</button>
-                    </div>
-                    <p> {composition} </p>
-                </div>
             </Link>
+            <div className="cardBottom">
+                <div className='cardBtn'>
+                    <Link className='cardText' to={`/product/${id}`}> <span>{name}</span> </Link>
+                    <button onClick={addItem} >BUNU SEÇ</button>
+                </div>
+                <Link className='cardText' to={`/product/${id}`}><p> {composition} </p> </Link>
+            </div>
         </div>
     )
 }

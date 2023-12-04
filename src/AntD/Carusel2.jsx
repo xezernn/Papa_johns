@@ -2,7 +2,6 @@ import React from 'react'
 import { Carousel } from 'antd';
 
 function Carusel2({data,setData}) {
-    console.log(data);
     return (
         <Carousel autoplay>
             <div className='sliderH3'>

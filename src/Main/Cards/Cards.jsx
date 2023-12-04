@@ -12,12 +12,14 @@ function Cards({basket, setBasket, data, setData}) {
     <div className="cards">
 
       {
-        data.map(item => <Card 
+        data.map(item => {
+        console.log(item);
+        return <Card 
           key={item.id} 
           {...item} 
           addItem={()=>{addBasket(item.id)}}
           />
-          )
+        })
       }
     </div>
   )
