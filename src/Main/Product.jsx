@@ -4,8 +4,6 @@ import { Link, useParams } from 'react-router-dom'
 
 function Product({ data, setData }) {
   const {url,id} = useParams()
-  console.log(url,id);
-
 
   return (
     <div className='productMain'>

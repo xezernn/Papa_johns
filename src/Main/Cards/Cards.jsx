@@ -1,6 +1,9 @@
 import { useState } from "react"
 import Card from "./Card"
+import { useParams } from "react-router-dom"
 
+// const prop = useParams()
+// console.log(prop);
 function Cards({basket, setBasket, data, setData}) {
   let n = 0
   function addBasket(id){
@@ -12,14 +15,12 @@ function Cards({basket, setBasket, data, setData}) {
     <div className="cards">
 
       {
-        data.map(item => {
-        console.log(item);
-        return <Card 
+        data.map(item => <Card 
           key={item.id} 
           {...item} 
           addItem={()=>{addBasket(item.id)}}
           />
-        })
+        )
       }
     </div>
   )

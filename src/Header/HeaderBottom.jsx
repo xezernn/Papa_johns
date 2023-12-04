@@ -10,28 +10,28 @@ function HeaderBottom() {
           <ul id='menuList'>
             <li><Link to="/">Kampaniyalar</Link></li>
             <li>
-              <Link to="/">Papadias</Link>
+              <Link to="/papadias">Papadias</Link>
             </li>
             <li className="active">
-              <Link to="/">Pizza</Link>
+              <Link to="/pizza">Pizza</Link>
             </li>
             <li>
-              <Link to="/">Qəlyanaltı</Link>
+              <Link to="/qelyanalti">Qəlyanaltı</Link>
             </li>
             <li>
-              <Link to="/">Salat</Link>
+              <Link to="/salat">Salat</Link>
             </li>
             <li>
-              <Link to="/">Pasta</Link>
+              <Link to="/pasta">Pasta</Link>
             </li>
             <li>
-              <Link to="/">İçki</Link>
+              <Link to="/icki">İçki</Link>
             </li>
             <li>
-              <Link to="/">Desert</Link>
+              <Link to="/desert">Desert</Link>
             </li>
             <li>
-              <Link to='/'>Sous</Link>
+              <Link to='/sous'>Sous</Link>
             </li>
           </ul>
           <span id='bal'>
