@@ -127,12 +127,17 @@ function Main({ sebet, setSebet}) {
     }
   ])
 
+  // const [data, setData] = useState([])
+
   // useEffect(()=>{
-  //   axios.get("https://papaapi.yetim.me/food")
-  //   .then(res=> console.log(res))
+  //   axios.get("https://raw.githubusercontent.com/xezernn/papaApi/main/data.json")
+  //   .then(res=> setData(res.data[0]))
   // },[])
+  
+  // .then(res=> console.log(res.data[0]))
 
-
+  // data.pizza.map(item => console.log(item))
+  // data.pizza.map(item => console.log(item))
 
   return (
     <main>
