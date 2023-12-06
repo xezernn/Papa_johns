@@ -3,8 +3,8 @@ import { CiCircleRemove } from "react-icons/ci";
 import SebetItem from './SebetItem';
 function Sebet({ sebet, setSebet, basket, setBasket }) {
 
-    function removeSbt(id){
-        setBasket(basket.filter(item => item.id !== id))
+    function removeSbt(name){
+        setBasket(basket.filter(item => item.name !== name ))
     }
 
     return (
@@ -12,7 +12,7 @@ function Sebet({ sebet, setSebet, basket, setBasket }) {
             <CiCircleRemove className='yasamen' onClick={() => { setSebet(!sebet) }} />
             <div className='items'>
                 {basket.map((item, i) => (
-                    <SebetItem key={item.id} {...item} removeSebet={()=>{removeSbt(item.id)}} />
+                    <SebetItem key={item.id} {...item} removeSebet={()=>{removeSbt(item.name)}} />
                 ))}
 
             </div>

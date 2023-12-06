@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react"
 import Cards from "./Cards/Cards"
-import MainSelect from "./MainSelect"
-import Promo from "./Promo"
 import Sebet from "./Sebet/Sebet"
-import Product from "./Product"
+import Product from "./Product/Product"
 import { Route, Router, Routes } from "react-router-dom"
 import axios from "axios"
-import { Col } from "antd"
-import TwoElem from "./TwoElem"
-import Kompaniya from "./Kompaniya"
+  import Kompaniya from "./Kompaniya"
+import Error404 from "./Error404"
 
 
-function Main({ sebet, setSebet}) {
-  const [basket, setBasket] = useState([])
+function Main({ sebet, setSebet, basket, setBasket}) {
+  
 
   const [data, setData] = useState([])
 
@@ -21,14 +18,19 @@ function Main({ sebet, setSebet}) {
     .then(res=> setData(res.data))
   },[])
   
+  function goo(){
+    console.log("sasasss");
+  }
+
+
   return (
     <main>
       <div className="container">
         <Routes>
-          <Route path="/" element={<Kompaniya />} />
-          {/* <Route path="/" element={<TwoElem basket={basket} setBasket={setBasket} data={data} setData={setData}   />}/> */}
-          <Route path="/:prop" element={<Cards basket={basket} setBasket={setBasket} data={data} setData={setData} />}/>
-          <Route path="/:category/:id" element={<Product data={data} setData={setData} />} />
+          <Route path="/menu" element={<Kompaniya />} />
+          <Route path="/menu/:prop" element={<Cards basket={basket} setBasket={setBasket} data={data} setData={setData} />}/>
+          <Route path="/menu/:category/:id" element={<Product data={data} setData={setData} basket={basket} setBasket={setBasket}   />} />
+          <Route path="*" element={<Error404/>} />
         </Routes>
         <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
    

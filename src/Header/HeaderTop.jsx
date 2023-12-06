@@ -23,7 +23,7 @@ function HeaderTop({ sebet, setSebet }) {
           </div>
           <div className='headerIcon flexCol' onClick={() => { setSebet(!sebet) }}>
             <RiShoppingBasket2Fill className='icon' />
-            <p>0M</p>
+            <p>0₼</p>
           </div>
         </div>
       </div>

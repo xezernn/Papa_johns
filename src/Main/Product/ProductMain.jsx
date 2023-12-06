@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Carusel2 from '../AntD/Carusel2'
+import Carusel2 from '../../AntD/Carusel2'
 
-function ProductMain({id,img,name,price,category,composition}) {
+function ProductMain({ id, img, name, price, category, composition, addSbtProdct  }) {
+    
+
+
     return (
         <>
             <div className="productTopBar">
@@ -18,7 +21,7 @@ function ProductMain({id,img,name,price,category,composition}) {
                         <img src={img} alt="" />
                     </div>
                     <div className='caruselDnone'>
-                        <Carusel2 img = {img} />
+                        <Carusel2 img={img} />
                     </div>
                 </div>
                 <div className="productRight">
@@ -34,7 +37,7 @@ function ProductMain({id,img,name,price,category,composition}) {
                     </div>
                     <div className='addBtn'>
                         <p>Şəhər: Baki</p>
-                        <button onClick={() => { addsbt(id) }}>Səbətə əlavə et</button>
+                        <button onClick={addSbtProdct}>Səbətə əlavə et</button>
                     </div>
                 </div>
             </div>
