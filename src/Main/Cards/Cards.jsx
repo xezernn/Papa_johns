@@ -1,18 +1,12 @@
 import { useParams } from "react-router-dom"
 import Card from "./Card"
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { nanoid } from "nanoid";
+import MainSelect from "../MainSelect";
+import Promo from "../Promo";
 
-function Cards({ basket, setBasket }) {
+function Cards({ basket, setBasket, data, setData }) {
 
-  const [propdata, setPropdata]=useState([])
-  const {prop} = useParams()
-  console.log(prop);
-
-  useEffect(()=>{
-    axios.get("https://raw.githubusercontent.com/xezernn/papaApi/main/data.json")
-    .then(res=> {setPropdata(res.data[0]), console.log(propdata)})
-  },[prop])
+  const { prop } = useParams()
 
   function addBasket(id) {
     let newItem = data.find(item => item.id === id)
@@ -20,20 +14,20 @@ function Cards({ basket, setBasket }) {
   }
 
   return (
-    <div className="cards">
+    <>
+      {prop != undefined ? <Promo/> :""}
 
-      {
-        propdata.prop.map(item => <Card
-          key={item.id}
-          {...item}
-          addItem={() => { addBasket(item.id) }}
-        />
-        )
-      }
-      {
-        console.log(propdata)
-      }
-    </div>
+      <div className="cards">
+
+        {
+          data?.[prop]?.map(item => <Card
+            key={nanoid()}
+            {...item}
+          />
+          )
+        }
+      </div>
+    </>
   )
 }
 

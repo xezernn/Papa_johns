@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaQuestion } from "react-icons/fa";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 function HeaderBottom() {
   return (
     <div className='headerRed'>

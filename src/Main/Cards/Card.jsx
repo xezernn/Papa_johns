@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 function Card({ id, img, category, name, composition, price, addItem }) {
     return (
-        
         <div className="card">
             <Link className='cardText' to={`/product/${id}`}>
                 <div className="cardTop"><img src={img} alt="mehsul" /></div>

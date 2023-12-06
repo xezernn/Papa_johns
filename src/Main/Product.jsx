@@ -4,10 +4,6 @@ import { Link, useParams } from 'react-router-dom'
 
 function Product({ data, setData }) {
   const {url,id} = useParams()
-
-  function addsbt(num){
-console.log(num);
-  }
   return (
     <div className='productMain'>
       <div className="productTopBar">
