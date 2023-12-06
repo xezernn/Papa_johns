@@ -12,7 +12,7 @@ import TwoElem from "./TwoElem"
 
 function Main({ sebet, setSebet}) {
   const [basket, setBasket] = useState([])
-  const [data, setData] = useState([
+ /*  const [data, setData] = useState([
     {
       "id": 1,
       "img": "https://imageproxy.wolt.com/menu/menu-images/5f31066a051911465b2444dd/b5b0ff72-dafb-11ea-98f9-da3a1e599769_k_ymal__pide.jpeg?w=600",
@@ -125,18 +125,20 @@ function Main({ sebet, setSebet}) {
       "composition": "Dana və quzu qiyməsi, bibər, soğan, pomidor,  kərə yağı",
       "price": 12
     }
-  ])
+  ]) */
 
-  // const [data, setData] = useState([])
+  const [data, setData] = useState([])
 
-  // useEffect(()=>{
-  //   axios.get("https://raw.githubusercontent.com/xezernn/papaApi/main/data.json")
-  //   .then(res=> setData(res.data[0]))
-  // },[])
+  useEffect(()=>{
+    axios.get("https://raw.githubusercontent.com/xezernn/papaApi/main/data.json")
+    .then(res=> setData(res.data[0]))
+  },[])
   
   // .then(res=> console.log(res.data[0]))
 
   // data.pizza.map(item => console.log(item))
+ 
+ 
   // data.pizza.map(item => console.log(item))
 
   return (
