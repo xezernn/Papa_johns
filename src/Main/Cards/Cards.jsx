@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom"
 import Card from "./Card"
 import { nanoid } from "nanoid";
-import MainSelect from "../MainSelect";
 import Promo from "../Promo";
+import MainSelect from "../MainSelect";
 
 function Cards({ basket, setBasket, data, setData }) {
 
@@ -15,12 +15,16 @@ function Cards({ basket, setBasket, data, setData }) {
 
   return (
     <>
-      {prop != undefined ? <Promo/> :""}
+      <Promo />
+      {prop === "Pizzalar" ? <MainSelect /> : ""}
+    
 
       <div className="cards">
 
         {
-          data?.[prop]?.map(item => <Card
+
+          // data?.[prop]?.map(item => <Card
+          data.filter(item => item.category == prop).map(item => <Card
             key={nanoid()}
             {...item}
           />

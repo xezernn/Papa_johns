@@ -6,9 +6,6 @@ import Cards from './Cards/Cards'
 function TwoElem({basket ,setBasket ,data ,setData}) {
     return (
         <>
-            <Promo />
-            <MainSelect />
-            <Cards basket={basket} setBasket={setBasket} data={data} setData={setData} />
         </>
     )
 }
