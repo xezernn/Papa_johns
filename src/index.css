@@ -523,17 +523,51 @@ h2 {
     margin: 100px auto;
 }
 .notFound a{color: #AD0F14; font-size: 1.4em;}
+.kompaniyalar {overflow: hidden;}
+.kompaniyaCards{display: flex; flex-direction: column; gap: 60px; flex-wrap: wrap;}
+.kompaniyaCard{
+    width: 100%;
+    height: 70vh;
+    padding: 20px 0;
+    margin-bottom: 67px;
+}
+.komCardTop img {width:100%;}
+
+.stocItem{height: 35px;}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    -webkit-transition: all, .3s;
+    transition: all, .3s;
+    height: 39px;
+    /* line-height: 39px; */
+    border: 0;
+    border-radius: 4px;
+    padding: 0 19px;
+    background: #0F9675;
+}
+
+
+
 @media only screen and (min-width: 500px) {
     .card {
         width: calc(50% - 15px);
     }
 
-    .cards {
+    .cards{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .kompaniyaCards{flex-direction: row; gap: 15px; }
+    .kompaniyaCard{width: calc(50% - 15px); height: max-content; padding: 0;}
     #menuList {
         margin-left: 0;
     }
@@ -777,5 +811,8 @@ h2 {
         border-radius: 15px;
     }
     .notFound{padding: 0 ;}
+
+    .kompaniyaCards{padding: 20px 0; flex-direction: row; gap: 15px; }
+    .kompaniyaCard{width: calc(25% - 15px); height: max-content; padding: 0;}
 
 }

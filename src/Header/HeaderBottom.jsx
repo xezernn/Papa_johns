@@ -16,7 +16,7 @@ function HeaderBottom() {
               <Link to="/menu/Pizzalar">Pizza</Link>
             </li>
             <li>
-              <Link to="/menu/Qəlyanaltılar">Qəlyanaltı</Link>
+              <Link to="/menu/Qelyanaltılar">Qəlyanaltı</Link>
             </li>
             <li>
               <Link to="/menu/Salatlar">Salat</Link>

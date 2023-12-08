@@ -21,7 +21,7 @@ function App() {
 
   return (
     err === "" ?
-      <>
+      <>  
         <Header sebet={sebet} setSebet={setSebet} />
         <Main sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} data={data} setData={setData} />
         <Footer />
