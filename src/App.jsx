@@ -4,6 +4,7 @@ import Header from "./Header/Header"
 import Main from "./Main/Main"
 import axios from "axios"
 import { Alert, Space } from 'antd';
+import Sebet from "./Main/Sebet/Sebet"
 
 
 function App() {
@@ -21,11 +22,13 @@ function App() {
 
   return (
     err === "" ?
-      <>  
+      <div className="App">  
         <Header sebet={sebet} setSebet={setSebet} />
         <Main sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} data={data} setData={setData} />
         <Footer />
-      </> 
+        <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
+
+      </div> 
       :
       <div className="error">
         <Space direction="vertical" style={{ width: '100%' }}>

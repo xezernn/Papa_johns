@@ -1,12 +1,14 @@
 import React from 'react'
 import { FaQuestion } from "react-icons/fa";
 import { Link } from "react-router-dom"
+import logo from '../assets/img/logo.png'
+
 function HeaderBottom() {
   return (
     <div className='headerRed'>
       <div className="container">
         <div id='redBar'>
-          <Link to="/" id='redLogo'><img src="https://www.papajohns.az/img/content/pj_logo_web_new.png" alt="logo" /></Link>
+          <Link to="/" id='redLogo'><img src={logo} alt="logo" /></Link>
           <ul id='menuList'>
             <li><Link to="/">Kampaniyalar</Link></li>
             <li>

@@ -8,7 +8,9 @@ function Sebet({ sebet, setSebet, basket, setBasket }) {
     }
 
     return (
-        <div className='sebet' style={{ display: sebet ? "none" : "block" }}>
+        // <div className='sebet' style={{ transform: sebet ? "translateX(0%)" : "translateX(100%)"}}>
+        <div className='sebet' style={{ right: !sebet ? "0px" : "-100%", position:"fixed"}}>
+        {/* <div className='sebet' style={{ display: sebet ? "none" : "block"}}> */}
             <CiCircleRemove className='yasamen' onClick={() => { setSebet(!sebet) }} />
             <div className='items'>
                 {basket.map((item, i) => (

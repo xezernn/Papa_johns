@@ -22,8 +22,7 @@ function Main({ sebet, setSebet, basket, setBasket,data, setData }) {
             <Route path="/menu/:category/:id" element={<Product data={data} setData={setData} basket={basket} setBasket={setBasket} />} />
             <Route path="*/*/*" element={<Error404 />} />
           </Routes>
-          <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
-
+    
         </div>
       </main>
   )

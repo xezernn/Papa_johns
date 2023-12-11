@@ -6,18 +6,17 @@ import MainSelect from "../Main Top Bar/MainSelect";
 
 function Cards({ basket, setBasket, data, setData }) {
 
-  const { prop } = useParams()
-
+  const { prop, url } = useParams()
+  console.log(prop);
   function addBasket(id,category) {
     let newItem = data.find(item => item.id === id && item.category === category)
     setBasket([...basket, newItem])
-    // console.log("salam");
   }
 
   return (
     <>
       <Promo />
-      {prop === "Pizzalar" ? <MainSelect /> : ""}
+      {prop === "Pizzalar" && <MainSelect /> }
       <div className="cards">
         {
           // data?.[prop]?.map(item => <Card
