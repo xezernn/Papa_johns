@@ -8,8 +8,8 @@ import Sebet from "./Main/Sebet/Sebet"
 
 
 function App() {
-  const [sebet, setSebet] = useState(true)
-  const [basket, setBasket] = useState([])
+  const [sebet, setSebet] = useState(true) //basketi aciq baglamaq ucun
+  const [basket, setBasket] = useState([])  //basketin icine ne ise elave etmek ucun 
   const [basketCount, setBasketCount] = useState(0)
   const [err, setErr] = useState("")
   const [data, setData] = useState([])
@@ -24,7 +24,7 @@ function App() {
     err === "" ?
       <div className="App">  
         <Header sebet={sebet} setSebet={setSebet} />
-        <Main sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} data={data} setData={setData} />
+        <Main basket={basket} setBasket={setBasket} data={data} setData={setData} />
         <Footer />
         <Sebet sebet={sebet} setSebet={setSebet} basket={basket} setBasket={setBasket} />
 

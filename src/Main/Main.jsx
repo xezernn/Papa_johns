@@ -9,7 +9,7 @@ import Error404 from "./Error404"
 
 
 
-function Main({ sebet, setSebet, basket, setBasket,data, setData }) {
+function Main({ basket, setBasket,data, setData }) {
 
   
 

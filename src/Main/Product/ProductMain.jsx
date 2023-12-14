@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Carusel2 from '../../AntD/Carusel2'
 
-function ProductMain({ id, img, name, price, category, composition, addSbtProdct  }) {
+function ProductMain({ id, img, name, price, category, composition, addSbtProdct, categoryUrl  }) {
     
 
 
@@ -10,7 +10,7 @@ function ProductMain({ id, img, name, price, category, composition, addSbtProdct
         <>
             <div className="productTopBar">
                 <ul id='productMenu'>
-                    <li><Link to="/">Mehsullar</Link></li>
+                    <li><Link to={categoryUrl} >{categoryUrl}</Link></li>
                     <li><Link>{name}</Link></li>
 
                 </ul>

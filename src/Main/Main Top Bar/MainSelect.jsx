@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 
 function MainSelect() {
   const param = useParams()
-  console.log();
   return (
     <div className="mainSelect bgSilver">
         <ul id='selectMenu'>

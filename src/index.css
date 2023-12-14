@@ -267,7 +267,7 @@ main {
     top: 0;
     right: 0;
     position: absolute;
-    transition: 0.5s all;
+    transition: 1.1s;
     /* transform: translateX(100%); */
 }
 

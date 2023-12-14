@@ -7,9 +7,8 @@ import MainSelect from "../Main Top Bar/MainSelect";
 function Cards({ basket, setBasket, data, setData }) {
 
   const { prop, url } = useParams()
-  console.log(prop);
-  function addBasket(id,category) {
-    let newItem = data.find(item => item.id === id && item.category === category)
+  function addBasket(name) {
+    let newItem = data.find(item => item.name === name)
     setBasket([...basket, newItem])
   }
 
@@ -19,11 +18,10 @@ function Cards({ basket, setBasket, data, setData }) {
       {prop === "Pizzalar" && <MainSelect /> }
       <div className="cards">
         {
-          // data?.[prop]?.map(item => <Card
           data.filter(item => item.category == prop).map(item => <Card
             key={nanoid()}
             {...item}
-            addItem = {()=>{addBasket(item.id, item.category)}}
+            addItem = {()=>{addBasket(item.name)}}
           />
           )
         }

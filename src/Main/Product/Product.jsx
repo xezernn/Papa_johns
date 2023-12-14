@@ -18,7 +18,7 @@ function Product({ data, setData, basket, setBasket }) {
   return (
     <div className='productMain'>
       {
-        mehsul?.map(item => <ProductMain key={item.id} {...item} addSbtProdct={()=>{addSbtProdct(item.name)}} />)
+        mehsul?.map(item => <ProductMain key={item.id} {...item} addSbtProdct={()=>{addSbtProdct(item.name)}} categoryUrl={category} />)
       }
     </div>
   )
