@@ -7,9 +7,20 @@ import MainSelect from "../Main Top Bar/MainSelect";
 function Cards({ basket, setBasket, data, setData }) {
 
   const { prop, url } = useParams()
+
   function addBasket(name) {
-    let newItem = data.find(item => item.name === name)
-    setBasket([...basket, newItem])
+    let newItem = data.find(item => item.name === name);
+    const index = basket.findIndex(item => item.name === name);
+    console.log(basket);
+    if (index === -1) {
+      setBasket([...basket, { ...newItem, count: 1 }]);
+    } else {
+      setBasket(prevBasket => {
+        const updatedBasket = [...prevBasket];
+        updatedBasket[index] = { ...updatedBasket[index], count: updatedBasket[index].count + 1 };
+        return updatedBasket;
+      });
+    }
   }
 
   return (
