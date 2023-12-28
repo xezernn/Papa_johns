@@ -6,12 +6,12 @@ import MainSelect from "../Main Top Bar/MainSelect";
 
 function Cards({ basket, setBasket, data, setData }) {
 
-  const { prop, url } = useParams()
-
-  function addBasket(name) {
+  let { prop, url } = useParams()
+  prop = prop === undefined ? "Pizzalar":prop
+  function addBasket(name,price) {
     let newItem = data.find(item => item.name === name);
+    typeof price === "number"?  newItem.price=price : newItem.price=price.xs
     const index = basket.findIndex(item => item.name === name);
-    console.log(basket);
     if (index === -1) {
       setBasket([...basket, { ...newItem, count: 1 }]);
     } else {
@@ -29,10 +29,10 @@ function Cards({ basket, setBasket, data, setData }) {
       {prop === "Pizzalar" && <MainSelect /> }
       <div className="cards">
         {
-          data.filter(item => item.category == prop).map(item => <Card
+          data.filter(item => item.category == prop ).map(item => <Card
             key={nanoid()}
             {...item}
-            addItem = {()=>{addBasket(item.name)}}
+            addItem = {()=>{addBasket(item.name, item.price)}}
           />
           )
         }

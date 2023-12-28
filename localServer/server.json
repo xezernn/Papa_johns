@@ -1,0 +1,43 @@
+{
+  "sifaris": [
+    {
+      "0": {
+        "id": 285,
+        "name": "Amerikan Hot",
+        "img": "https://www.papajohns.az/uploads/images/pizza/american-hot.png",
+        "category": "Pizzalar",
+        "cath": [
+          "vegan",
+          "spicy"
+        ],
+        "price": 5.5,
+        "composition": "Pizza Sousu, Mozzarella, Pepperoni, Halapeno Bibəri",
+        "count": 1
+      },
+      "1": {
+        "id": 305,
+        "name": "Karnaval",
+        "img": "https://www.papajohns.az/uploads/images/pizza/Karnaval.jpg",
+        "category": "Pizzalar",
+        "cath": [
+          "vegan"
+        ],
+        "price": 5.5,
+        "composition": "Pizza Sousu, Göbələk, Qara Zeytun, Pepperoni, Mozzarella",
+        "count": 3
+      },
+      "2": {
+        "id": 307,
+        "name": "NY Style Margarita (40 sm)",
+        "img": "https://www.papajohns.az/uploads/images/pizza/New-York-Style-Margarita.jpg",
+        "category": "Pizzalar",
+        "cath": [
+          "vegan"
+        ],
+        "composition": "Pizza Sousu, Mozzarella, Pomidor, Oreqano",
+        "count": 1
+      },
+      "id": 1
+    }
+  ]
+}

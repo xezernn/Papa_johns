@@ -1,16 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Carusel2 from '../../AntD/Carusel2'
+import { Select, Space } from 'antd';
+function ProductMain({ id, img, price, name, category, composition, addSbtProdct, categoryUrl }) {
+    const [priceSize, setPriceSize] = useState()
+    const urlNav =  useNavigate()
 
-function ProductMain({ id, img, name, price, category, composition, addSbtProdct, categoryUrl  }) {
+    function navUrl ( ){
+        urlNav(`/menu/${categoryUrl}`)
+    }
     
+    
+    function handleSize(e) {
+        setPriceSize(e)
+    }
+
+    useEffect(()=>{
+        if(typeof(price)=== "number"){
+            setPriceSize(price)
+        }
+        else{
+            setPriceSize(price.xs)
+        }
+    },[])
 
 
     return (
         <>
             <div className="productTopBar">
                 <ul id='productMenu'>
-                    <li><Link to={categoryUrl} >{categoryUrl}</Link></li>
+                    <li><Link to={"#"} onClick={navUrl} >{categoryUrl}</Link></li>
                     <li><Link>{name}</Link></li>
 
                 </ul>
@@ -25,7 +44,7 @@ function ProductMain({ id, img, name, price, category, composition, addSbtProdct
                     </div>
                 </div>
                 <div className="productRight">
-                    <h2>Məhsulun qiyməti: <span className='qiymet'>{price} azn</span></h2>
+                    <h2>Məhsulun qiyməti: <span className='qiymet'>{priceSize} azn</span></h2>
                     <h3>{name}</h3>
                     <span>Çatdırılma: Var</span>
 
@@ -36,11 +55,29 @@ function ProductMain({ id, img, name, price, category, composition, addSbtProdct
 
                     </div>
                     <div className='addBtn'>
-                        <p>Şəhər: Baki</p>
-                        <button onClick={addSbtProdct}>Səbətə əlavə et</button>
-                    </div>
+                        {
+                            typeof(price)==="number" ? 
+                            "Yalniz tək ölçüdə təqdim olunur!"
+                            :
+                            <p > 
+                                Məhsulun ölçüsünü təyin edin:
+                                <Select
+                                defaultValue={price.xs}
+                                style={{ width: 65 }}
+                                onChange={handleSize}
+                                options={[
+                                    { value: price.xs , label: price.xs},
+                                    { value: price.sm , label: price.sm},
+                                    { value: price.md , label: price.md},
+                                    { value: price.lg , label: price.lg},
+                                ]}
+                            />
+                            </p>
+                        } 
+                    <button onClick={() => { addSbtProdct(priceSize) }}>Səbətə əlavə et</button>
                 </div>
             </div>
+        </div >
 
         </>
     )

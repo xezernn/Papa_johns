@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { RiShoppingBasket2Fill } from "react-icons/ri";
 import logo from '../assets/img/logo.png'
 
-function HeaderTop({ sebet, setSebet }) {
+function HeaderTop({ sebet, setSebet, basket , say}) {
+  
+
+
+
   return (
     <div className='container'>
       <div className="headerTop">
@@ -27,7 +31,7 @@ function HeaderTop({ sebet, setSebet }) {
           </div>
           <div className='headerIcon flexCol' onClick={() => { setSebet(!sebet) }}>
             <RiShoppingBasket2Fill className='icon' />
-            <p>0₼</p>
+            <p>{say.toString().length >4 ? say.toFixed(2) : say}₼</p>
           </div>
         </div>
       </div>

@@ -154,7 +154,7 @@ main {
 
 .card {
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden;
 }
 
@@ -163,7 +163,7 @@ main {
 }
 
 .cardTop {
-    height: 300px;
+    height: 200px;
     width: 100%;
 }
 
@@ -273,7 +273,7 @@ main {
 
 
 .items {
-    height: 95%;
+    height: 90%;
     overflow-y: scroll;
 }
 
@@ -290,11 +290,16 @@ main {
     margin: 10px;
 }
 
-.sebetText {
-    padding: 10px;
+.sebetBottom {
+    padding:  10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.sebetBtns{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .sebetBtn {
@@ -320,7 +325,7 @@ main {
     display: flex;
     padding: 20px 10px;
     justify-content: space-between;
-
+    flex-direction: column;
     position: relative;
 }
 
@@ -331,7 +336,8 @@ main {
 }
 
 .pul {
-    margin-left: 10px;
+    margin-top: 5px;
+    /* color: rgb(147, 0, 0); */
 }
 
 .listBtn input {
@@ -591,8 +597,11 @@ h2 {
 }
 
 .textDesk{display: none;}
-
+.umumiMebleg{
+    color: #AD0F14;
+}
 @media only screen and (min-width: 500px) {
+
     .card {
         width: calc(50% - 15px);
     }
@@ -613,7 +622,7 @@ h2 {
         height: max-content;
         padding: 0;
     }
-    
+    .listRight{flex-direction: row;}
     
 }
 

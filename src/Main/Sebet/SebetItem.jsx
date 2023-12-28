@@ -1,11 +1,8 @@
 import React from 'react'
 import { CiCircleRemove } from "react-icons/ci";
 
-function SebetItem({ id, img, category, name, composition, price,count, removeSebet }) {
+function SebetItem({ id, img, category, name, composition, price, count, removeSebet, addCount }) {
 
-    function coundPlus(){
-        
-    }
 
     return (
         <div className="sebetItem">
@@ -13,15 +10,17 @@ function SebetItem({ id, img, category, name, composition, price,count, removeSe
             <div className="listRight">
                 <div className='listText'>
                     <h2>{name}</h2>
-                    <p>30 sm</p>
+                    <br />
+                    <p>Ölçüsü: 24sm </p>
+                    <p className='pul'>
+                        Qiyməti: {price} ₼
+                    </p>
                 </div>
                 <div className="listBtn">
-                    <button>+</button>
+                    <button onClick={() => { addCount(1) }}>+</button>
                     <input type="text" value={count} disabled />
-                    <button >-</button>
-                    <span className='pul'>
-                        {price}M
-                    </span>
+                    <button onClick={() => { addCount(-1) }} >-</button>
+
                 </div>
                 <CiCircleRemove onClick={removeSebet} className='removeBtn' />
             </div>
